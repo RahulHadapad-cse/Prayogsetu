@@ -1,0 +1,427 @@
+
+/* Main application */
+.reflection-lab {
+  width: 100%;
+  max-width: 1250px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f3f6fb;
+  color: #1e293b;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.reflection-lab * {
+  box-sizing: border-box;
+}
+
+/* Header */
+.rl-header {
+  text-align: center;
+  padding: 25px 10px 35px;
+}
+
+.rl-header h1 {
+  color: #174d88;
+  font-size: 36px;
+  margin: 0 0 12px;
+}
+
+.rl-header p {
+  color: #64748b;
+  font-size: 19px;
+  margin: 10px 0;
+}
+
+.rl-header span {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 30px;
+}
+
+/* Progress section */
+.rl-progress {
+  background: white;
+  border: 1px solid #dbe3ef;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 25px;
+}
+
+.rl-progress-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: #174d88;
+  font-size: 18px;
+}
+
+.rl-progress-track {
+  width: 100%;
+  height: 11px;
+  background: #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.rl-progress-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.rl-slide-labels {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.rl-slide-labels .active {
+  color: #174d88;
+  font-weight: bold;
+}
+
+/* Content card */
+.rl-card {
+  background: white;
+  border: 1px solid #dbe3ef;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 25px;
+}
+
+.rl-card h2 {
+  text-align: center;
+  color: #174d88;
+  font-size: 27px;
+  margin: 0 0 15px;
+}
+
+.rl-subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* Theory and experiment sections */
+.rl-section {
+  background: #f8fafc;
+  border-left: 4px solid #2563eb;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 22px 0;
+  line-height: 1.7;
+}
+
+.rl-section h3 {
+  color: #174d88;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.rl-section p {
+  line-height: 1.7;
+}
+
+.rl-section li {
+  margin-bottom: 9px;
+}
+
+/* Ray diagram */
+.rl-ray-diagram {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 15px auto;
+  background: white;
+  border-radius: 10px;
+}
+
+.rl-note {
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Formula */
+.rl-formula {
+  background: #dbeafe;
+  color: #174d88;
+  text-align: center;
+  padding: 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 19px;
+  margin: 20px 0;
+}
+
+/* Slider */
+.rl-angle-value {
+  text-align: center;
+  color: #2563eb;
+  font-size: 34px;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.rl-slider {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  margin: 25px auto 12px;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.rl-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  max-width: 650px;
+  margin: auto;
+  color: #64748b;
+}
+
+/* Angle measurement cards */
+.rl-measurements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 22px 0;
+}
+
+.rl-measurements div {
+  background: #eff6ff;
+  padding: 22px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.rl-measurements span {
+  display: block;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+.rl-measurements strong {
+  display: block;
+  font-size: 27px;
+  color: #2563eb;
+}
+
+/* Tables */
+.rl-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.rl-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  background: white;
+}
+
+.rl-table th,
+.rl-table td {
+  border: 1px solid #dbe3ef;
+  padding: 13px;
+  text-align: center;
+}
+
+.rl-table th {
+  background: #dbeafe;
+  color: #174d88;
+}
+
+/* Graph */
+.rl-graph {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 10px;
+}
+
+/* Quiz */
+.rl-quiz-progress {
+  text-align: center;
+  background: #dbeafe;
+  color: #174d88;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 20px 0;
+}
+
+.rl-options {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.rl-option {
+  text-align: left;
+  padding: 15px;
+  border: 1px solid #cbd5e1;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #1e293b;
+}
+
+.rl-option:hover:not(:disabled) {
+  background: #eff6ff;
+  border-color: #2563eb;
+}
+
+.rl-option.selected {
+  border: 2px solid #2563eb;
+  background: #eff6ff;
+}
+
+.rl-option.correct {
+  background: #dcfce7;
+  border-color: #16a34a;
+}
+
+.rl-option.incorrect {
+  background: #fee2e2;
+  border-color: #dc2626;
+}
+
+.rl-feedback {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+/* Results */
+.rl-result-box {
+  background: #eff6ff;
+  border-radius: 12px;
+  padding: 22px;
+  line-height: 1.7;
+}
+
+.rl-result-box h3 {
+  color: #174d88;
+}
+
+.rl-video-list li {
+  margin-bottom: 12px;
+}
+
+.rl-video-list a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.rl-video-list a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation buttons */
+.rl-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.rl-primary,
+.rl-secondary {
+  padding: 13px 23px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.rl-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.rl-primary:hover:not(:disabled) {
+  background: #174d88;
+}
+
+.rl-secondary {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.rl-secondary:hover {
+  background: #cbd5e1;
+}
+
+.rl-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive design */
+@media (max-width: 650px) {
+  .reflection-lab {
+    padding: 10px;
+  }
+
+  .rl-header h1 {
+    font-size: 26px;
+  }
+
+  .rl-header p {
+    font-size: 16px;
+  }
+
+  .rl-card {
+    padding: 16px;
+  }
+
+  .rl-card h2 {
+    font-size: 22px;
+  }
+
+  .rl-progress-heading {
+    font-size: 15px;
+  }
+
+  .rl-slide-labels {
+    font-size: 11px;
+  }
+
+  .rl-measurements {
+    grid-template-columns: 1fr;
+  }
+
+  .rl-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .rl-primary,
+  .rl-secondary {
+    width: 100%;
+  }
+}

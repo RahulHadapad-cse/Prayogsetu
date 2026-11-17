@@ -1,0 +1,634 @@
+
+.som-lab {
+  width: min(1100px, calc(100% - 32px));
+  margin: 28px auto;
+  color: #1e293b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.som-lab * {
+  box-sizing: border-box;
+}
+
+.som-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 28px;
+  color: white;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #134e4a, #0d9488);
+}
+
+.som-eyebrow {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  opacity: .85;
+}
+
+.som-header h1 {
+  margin: 0;
+  font-size: clamp(25px, 4vw, 35px);
+}
+
+.som-header p:last-child {
+  margin: 10px 0 0;
+  line-height: 1.5;
+  opacity: .9;
+}
+
+.som-header-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 65px;
+  height: 65px;
+  border-radius: 17px;
+  background: #ffffff22;
+  font-size: 34px;
+}
+
+.som-progress {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.som-step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  min-height: 48px;
+  padding: 8px;
+  border: 1px solid #dbe3ee;
+  border-radius: 10px;
+  color: #64748b;
+  background: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.som-step span {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  font-weight: 700;
+}
+
+.som-step.active {
+  color: #0f766e;
+  border-color: #0d9488;
+  background: #f0fdfa;
+  font-weight: 700;
+}
+
+.som-step.active span,
+.som-step.completed span {
+  color: white;
+  background: #0d9488;
+}
+
+.som-panel {
+  padding: 26px;
+  border: 1px solid #dbe3ee;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 5px 20px #0f172a0a;
+}
+
+.som-heading {
+  margin-bottom: 23px;
+}
+
+.som-heading > span {
+  color: #0d9488;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.som-heading h2 {
+  margin: 9px 0;
+  color: #134e4a;
+  font-size: 25px;
+}
+
+.som-heading p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.som-three-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.som-info-card {
+  margin-bottom: 16px;
+  padding: 20px;
+  border: 1px solid #dbe3ee;
+  border-radius: 13px;
+  background: white;
+}
+
+.som-info-card h3 {
+  margin: 0 0 12px;
+  color: #134e4a;
+  font-size: 18px;
+}
+
+.som-info-card p,
+.som-info-card li {
+  color: #475569;
+  line-height: 1.7;
+}
+
+.som-info-card ul {
+  padding-left: 22px;
+}
+
+.som-state-icon {
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+.som-formula {
+  margin: 12px 0;
+  padding: 14px;
+  border-radius: 9px;
+  color: #0f766e;
+  background: #f0fdfa;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.som-note {
+  padding: 15px;
+  border-left: 4px solid #0d9488;
+  border-radius: 8px;
+  color: #115e59;
+  background: #f0fdfa;
+  line-height: 1.6;
+}
+
+.som-simulation {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid #dbe3ee;
+  border-radius: 14px;
+  background: #f8fafc;
+}
+
+.som-current-phase {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  padding: 18px 10px;
+  border-radius: 12px;
+  background: white;
+}
+
+.som-current-phase > span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.som-phase-label {
+  font-size: 25px;
+}
+
+.som-phase-label.solid {
+  color: #2563eb;
+}
+
+.som-phase-label.liquid {
+  color: #0d9488;
+}
+
+.som-phase-label.gas {
+  color: #ea580c;
+}
+
+.som-temperature {
+  color: #134e4a;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.som-particle-box {
+  min-width: 0;
+  text-align: center;
+}
+
+.som-particle-box svg {
+  display: block;
+  width: 100%;
+  max-height: 290px;
+}
+
+.som-particle {
+  stroke: #ffffff;
+  stroke-width: 1.5;
+}
+
+.som-particle.solid {
+  fill: #2563eb;
+}
+
+.som-particle.liquid {
+  fill: #0d9488;
+}
+
+.som-particle.gas {
+  fill: #ea580c;
+}
+
+.som-particle-caption {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.som-temperature-control {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #dbe3ee;
+  border-radius: 12px;
+}
+
+.som-temperature-control label {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.som-temperature-control label strong {
+  color: #0d9488;
+  font-size: 18px;
+}
+
+.som-temperature-control input {
+  width: 100%;
+  accent-color: #0d9488;
+  cursor: pointer;
+}
+
+.som-range-labels {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.som-phase-explanation {
+  margin-top: 16px;
+  padding: 17px;
+  border-radius: 11px;
+  background: #f0fdfa;
+}
+
+.som-phase-explanation h3 {
+  margin: 0 0 8px;
+  color: #134e4a;
+}
+
+.som-phase-explanation p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.som-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.som-button {
+  min-height: 42px;
+  padding: 10px 17px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.som-button.primary {
+  color: white;
+  background: #0d9488;
+}
+
+.som-button.primary:hover {
+  background: #0f766e;
+}
+
+.som-button.secondary {
+  border-color: #dbe3ee;
+  color: #334155;
+  background: white;
+}
+
+.som-button.secondary:hover {
+  background: #f1f5f9;
+}
+
+.som-button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.som-table-wrap {
+  margin-top: 25px;
+  overflow-x: auto;
+}
+
+.som-table-wrap h3 {
+  color: #134e4a;
+}
+
+.som-table-wrap > p {
+  color: #64748b;
+}
+
+.som-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.som-table-wrap th,
+.som-table-wrap td {
+  padding: 12px;
+  border-bottom: 1px solid #dbe3ee;
+  text-align: left;
+}
+
+.som-table-wrap th {
+  color: #334155;
+  background: #f1f5f9;
+}
+
+.som-graph-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.som-graph-wrap svg {
+  display: block;
+  width: 100%;
+  min-width: 350px;
+  max-height: 360px;
+}
+
+.som-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 12px;
+  color: #475569;
+  font-size: 13px;
+}
+
+.som-legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.som-legend i {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.solid-dot {
+  background: #2563eb;
+}
+
+.liquid-dot {
+  background: #0d9488;
+}
+
+.gas-dot {
+  background: #ea580c;
+}
+
+.som-empty {
+  padding: 40px 20px;
+  border: 1px dashed #5eead4;
+  border-radius: 14px;
+  background: #f0fdfa;
+  text-align: center;
+}
+
+.som-empty h3 {
+  color: #134e4a;
+}
+
+.som-empty p {
+  color: #64748b;
+}
+
+.som-question {
+  margin-bottom: 15px;
+  padding: 20px;
+  border: 1px solid #dbe3ee;
+  border-radius: 13px;
+}
+
+.som-question h3 {
+  margin: 0 0 15px;
+  color: #134e4a;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.som-options {
+  display: grid;
+  gap: 9px;
+}
+
+.som-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #dbe3ee;
+  border-radius: 9px;
+  color: #475569;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.som-option input {
+  margin-top: 4px;
+  accent-color: #0d9488;
+}
+
+.som-option.selected {
+  border-color: #5eead4;
+  background: #f0fdfa;
+}
+
+.som-option.correct {
+  border-color: #22c55e;
+  background: #f0fdf4;
+}
+
+.som-option.incorrect {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.som-explanation {
+  margin: 12px 0 0;
+  padding: 12px;
+  border-radius: 8px;
+  color: #166534;
+  background: #f0fdf4;
+  line-height: 1.6;
+}
+
+.som-score {
+  padding: 16px;
+  border-radius: 10px;
+  color: #0f766e;
+  background: #f0fdfa;
+  font-size: 18px;
+  text-align: center;
+}
+
+.som-complete {
+  padding: 25px;
+  border: 1px solid #99f6e4;
+  border-radius: 14px;
+  background: #f0fdfa;
+  text-align: center;
+}
+
+.som-complete > div {
+  font-size: 40px;
+}
+
+.som-complete h3 {
+  margin: 10px 0;
+  color: #134e4a;
+  font-size: 22px;
+}
+
+.som-complete p {
+  color: #64748b;
+}
+
+.som-big-number {
+  display: block;
+  margin: 15px 0;
+  color: #0d9488;
+  font-size: 30px;
+}
+
+.som-video-links {
+  display: grid;
+  gap: 12px;
+}
+
+.som-video-links a {
+  color: #0f766e;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.som-video-links a:hover {
+  text-decoration: underline;
+}
+
+.som-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 30px;
+}
+
+.som-footer span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .som-three-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .som-simulation {
+    grid-template-columns: 1fr;
+  }
+
+  .som-current-phase {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .som-step {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 10px;
+  }
+
+  .som-panel {
+    padding: 17px;
+  }
+}
+
+@media (max-width: 430px) {
+  .som-lab {
+    width: calc(100% - 18px);
+    margin-top: 10px;
+  }
+
+  .som-header {
+    padding: 19px;
+  }
+
+  .som-header-icon {
+    flex-basis: 45px;
+    height: 45px;
+    font-size: 24px;
+  }
+
+  .som-heading h2 {
+    font-size: 21px;
+  }
+
+  .som-footer .som-button {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+}

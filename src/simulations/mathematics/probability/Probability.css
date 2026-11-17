@@ -1,0 +1,35 @@
+
+@import "../MathematicsExperiment.css";
+
+.probability-visual {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+}
+
+.probability-die {
+  width: 115px;
+  height: 115px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  background: white;
+  border: 2px solid #0f8b83;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+  font-size: 65px;
+  color: #164e63;
+}
+
+.probability-visual h3 {
+  color: #164e63;
+  margin: 8px 0;
+}
+
+.probability-visual p {
+  color: #536575;
+  text-align: center;
+}
